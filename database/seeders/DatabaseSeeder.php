@@ -2,22 +2,15 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Post;
 
-class DatabaseSeeder extends Seeder
+class PostSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
-    public function run(): void
+    public function run()
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        Post::create(['title' => 'Pirmais ieraksts', 'content' => 'Saturs pirmajam ierakstam']);
+        Post::create(['title' => 'Otrais ieraksts', 'content' => 'Saturs otrajam ierakstam']);
+        Post::create(['title' => 'Trešais ieraksts', 'content' => 'Saturs trešajam ierakstam']);
     }
 }
